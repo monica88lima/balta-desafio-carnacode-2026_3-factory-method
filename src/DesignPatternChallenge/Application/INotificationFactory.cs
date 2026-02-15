@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatternChallenge.Infrasctruture.Factory
+namespace DesignPatternChallenge.Application
 {
     public interface INotificationFactory
     {

@@ -1,4 +1,7 @@
-﻿namespace DesignPatternChallenge.Infrasctruture.Factory
+﻿using DesignPatternChallenge.Application;
+using DesignPatternChallenge.Infrasctruture.Channel;
+
+namespace DesignPatternChallenge.Infrasctruture.Factory
 {
     public class SMSNotificationFactory: INotificationFactory
     {

@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DesignPatternChallenge;
+using DesignPatternChallenge.Application;
 using DesignPatternChallenge.Infrasctruture.Factory;
 
 Console.WriteLine("=== Sistema de Notificações ===\n");
