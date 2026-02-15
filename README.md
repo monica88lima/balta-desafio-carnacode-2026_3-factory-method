@@ -2,7 +2,7 @@
 
 ## 🥁 CarnaCode 2026 - Desafio 03 - Factory Method
 
-Oi, eu sou o [seu nome aqui] e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **CarnaCode 2026**, realizado pelo [balta.io](https://balta.io). 👻
+Oi, eu sou a Mônica e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **CarnaCode 2026**, realizado pelo [balta.io](https://balta.io). 👻
 
 Aqui você vai encontrar projetos, exercícios e códigos que estou desenvolvendo durante o desafio. O objetivo é colocar a mão na massa, testar ideias e registrar minha evolução no mundo da tecnologia.
 
@@ -26,3 +26,27 @@ Minha principal fonte de conhecimento durante o desafio foi o eBook gratuito [Fu
 
 ### Veja meu progresso no desafio
 [Incluir link para o repositório central]
+
+### Factory Method Pattern — Resumo
+O Factory Method é um padrão criacional que define uma interface para criar objetos, mas permite que as subclasses decidam qual classe concreta será instanciada.
+A ideia central é: Quem usa o objeto não deve saber como ele é criado.
+
+🧠 Como foi implementado no projeto
+
+A arquitetura foi organizada separando responsabilidades em camadas.
+📦 DesignerPatternChallenge
+ ┣ 📂 Application - Camada que abstrai as implementações concretas. Orquestra o envio.
+ ┃ ┣ 📜 INotificationFactory.cs
+ ┃ ┣ 📜 NotificationCenter.cs
+ ┃
+ ┣ 📂 Infrastructure -Camada das implementações concretas.
+ ┃ ┣ 📂 Channel 👉 Todo novo canal deve ser incluído aqui.
+ ┃ ┃ ┣ 📜 EmailNotification.cs
+ ┃ ┃ ┣ 📜 SmsNotification.cs
+ ┃ ┃
+ ┃ ┣ 📂 Factory Contém as fábricas concretas: Responsáveis por instanciar o canal correto.
+ ┃ ┃ ┣ 📜 EmailNotificationFactory.cs
+ ┃ ┃ ┣ 📜 SmsNotificationFactory.cs
+ ┃
+ ┣ 📜 INotification.cs -Todos os canais devem implementar esse contrato.
+ ┣ 📜 Program.cs
